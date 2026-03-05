@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vid Player – HD Video Audio Player for Android</title>
+<title>Vid Player – Fast HD Video Player for Android</title>
 
-<meta name="description" content="Vid Player is a powerful all format video player for Android. Play 4K, Full HD, MKV, MP4, AVI, MOV and more using advanced LibVLC engine. Smooth playback, subtitle support and powerful media controls.">
+<meta name="description" content="Vid Player is a fast and powerful Android video player powered by Google Media3 ExoPlayer. Play HD and 4K videos with playlist, private locker, subtitles, lyrics and gesture controls.">
 
-<meta name="keywords" content="Vid Player, Video Player Android, All Format Video Player, 4K Video Player, HD Video Player, MKV Player, LibVLC Video Player">
+<meta name="keywords" content="Vid Player, video player android, exoplayer video player, all format video player, playlist video player">
 
-<meta name="author" content="Indrajeet Rajbhar">
-
-<meta property="og:title" content="Vid Player – HD Video Audio Player">
-<meta property="og:description" content="Play all video formats including 4K, MKV, MP4, AVI using the powerful LibVLC engine.">
-<meta property="og:type" content="website">
+<link rel="icon" href="vid_Player_icon.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -28,25 +26,32 @@ color:white;
 }
 
 header{
-padding:60px 20px;
 text-align:center;
+padding:80px 20px;
 background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+.logo{
+width:120px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 header h1{
 font-size:42px;
-margin:0;
+margin-top:20px;
 }
 
 header p{
-font-size:18px;
+max-width:650px;
+margin:auto;
 opacity:.9;
 }
 
-.download-btn{
+.download{
+margin-top:25px;
 display:inline-block;
-margin-top:20px;
-padding:14px 28px;
+padding:14px 30px;
 background:white;
 color:#2563eb;
 border-radius:40px;
@@ -55,36 +60,52 @@ text-decoration:none;
 }
 
 section{
-padding:60px 20px;
 max-width:1100px;
 margin:auto;
+padding:60px 20px;
 }
 
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
-.feature{
+.card{
 background:#1e293b;
 padding:25px;
 border-radius:12px;
+transition:.3s;
 }
 
-.feature h3{
-margin-top:0;
+.card:hover{
+transform:translateY(-6px);
 }
 
-.screenshots{
+.slider{
+max-width:900px;
+margin:auto;
+overflow:hidden;
+border-radius:14px;
+}
+
+.slides{
 display:flex;
-gap:20px;
-overflow:auto;
+width:300%;
+animation:slide 12s infinite;
 }
 
-.screenshots img{
-height:420px;
-border-radius:10px;
+.slides img{
+width:100%;
+}
+
+@keyframes slide{
+
+0%{transform:translateX(0)}
+33%{transform:translateX(-100%)}
+66%{transform:translateX(-200%)}
+100%{transform:translateX(0)}
+
 }
 
 footer{
@@ -95,37 +116,54 @@ background:#020617;
 
 footer a{
 color:#38bdf8;
-text-decoration:none;
 margin:0 10px;
+text-decoration:none;
 }
 
 </style>
+
+<!-- Google Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"MobileApplication",
+ "name":"Vid Player",
+ "applicationCategory":"MultimediaApplication",
+ "operatingSystem":"Android",
+ "description":"Fast Android video player with playlist, subtitle, private locker and gesture controls.",
+ "downloadUrl":"https://play.google.com/store/apps/details?id=com.inder.vidplayer",
+ "offers":{
+ "@type":"Offer",
+ "price":"0",
+ "priceCurrency":"USD"
+ }
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
 
+<img src="vid_Player_icon.jpg" class="logo">
+
 <h1>Vid Player</h1>
 
-<p>Powerful All Format Video Player for Android</p>
+<p>
+Fast & smooth Android video player powered by Google Media3 ExoPlayer.
+Play HD, Full HD and 4K videos with playlist, subtitles, lyrics and private locker.
+</p>
 
-<a class="download-btn" href="https://play.google.com/store/apps/details?id=com.inder.vidplayer">
+<a class="download"
+href="https://play.google.com/store/apps/details?id=com.inder.vidplayer">
+
 Download on Google Play
+
 </a>
 
 </header>
-
-
-<section>
-
-<h2>About Vid Player</h2>
-
-<p>
-Vid Player is a powerful and lightweight Android video player designed to play all video formats smoothly. Built using the advanced LibVLC media engine, Vid Player delivers high-performance video playback including 4K, Full HD, and Ultra HD videos.
-</p>
-
-</section>
 
 
 <section>
@@ -134,45 +172,46 @@ Vid Player is a powerful and lightweight Android video player designed to play a
 
 <div class="features">
 
-<div class="feature">
-<h3>All Video Formats</h3>
-<p>Supports MP4, MKV, AVI, MOV, FLV, WMV and many more formats.</p>
+<div class="card">
+<h3>Fast & Smooth Playback</h3>
+<p>Powered by Google Media3 ExoPlayer for smooth HD and 4K video playback.</p>
 </div>
 
-<div class="feature">
-<h3>4K / Ultra HD Playback</h3>
-<p>Watch high quality 4K and Full HD videos with smooth hardware acceleration.</p>
+<div class="card">
+<h3>Private Video Locker</h3>
+<p>Hide and protect your private videos securely.</p>
 </div>
 
-<div class="feature">
-<h3>Playlist Control</h3>
-<p>Advanced Playlist Screen Manage Video or audio and Create Your Playlist.</p>
+<div class="card">
+<h3>Playlist Support</h3>
+<p>Create and manage playlists easily.</p>
 </div>
 
-<div class="feature">
+<div class="card">
 <h3>Subtitle Support</h3>
-<p>Load and sync subtitles easily while watching movies.</p>
+<p>Load and sync subtitles while watching videos.</p>
 </div>
 
-<div class="feature">
-<h3>Background Play</h3>
-<p>Continue audio playback while using other apps.</p>
+<div class="card">
+<h3>Lyrics Support</h3>
+<p>View lyrics while playing music videos.</p>
 </div>
 
-<div class="feature">
+<div class="card">
 <h3>Gesture Controls</h3>
-<p>Control brightness, volume and seek easily using gestures.</p>
-</div>
-<div class="feature">
-<h3>Private Locker</h3>
-<p>For More Privacy You Can private any Media files.</p>
+<p>Control brightness, volume and seek with simple gestures.</p>
 </div>
 
-  <div class="feature">
-<h3>Fast & Secure</h3>
-<p>Build With Google Library for fast and Relibers.</p>
+<div class="card">
+<h3>Background Play</h3>
+<p>Continue video audio playback while using other apps.</p>
 </div>
-  
+
+<div class="card">
+<h3>All Format Support</h3>
+<p>Supports MP4, MKV, AVI, MOV and many popular video formats.</p>
+</div>
+
 </div>
 
 </section>
@@ -182,7 +221,9 @@ Vid Player is a powerful and lightweight Android video player designed to play a
 
 <h2>App Screenshots</h2>
 
-<div class="screenshots">
+<div class="slider">
+
+<div class="slides">
 
 <img src="screenshot1.png">
 <img src="screenshot2.png">
@@ -190,16 +231,7 @@ Vid Player is a powerful and lightweight Android video player designed to play a
 
 </div>
 
-</section>
-
-
-<section>
-
-<h2>Why Choose Vid Player?</h2>
-
-<p>
-Vid Player is designed for users who want a powerful, fast and reliable video player. With support for almost all media formats and optimized performance using LibVLC technology, Vid Player delivers the best video playback experience on Android phones and tablets.
-</p>
+</div>
 
 </section>
 
@@ -208,11 +240,15 @@ Vid Player is designed for users who want a powerful, fast and reliable video pl
 
 <p>© 2026 Vid Player</p>
 
-<a href="https://digitalhelpxyz.github.io/Vid-Player/privacy-policy.html">Privacy Policy</a>
+<p>
 
-<a href="https://digitalhelpxyz.github.io/Vid-Player/contact-us.html">Contact Us</a>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="contact-us.html">Contact</a>
+
+</p>
 
 </footer>
 
 </body>
+
 </html>
